@@ -67,6 +67,8 @@ export class LastSended extends Component {
                             <CardText>
                                 <ReactTable
                                     filterable
+                                    defaultFilterMethod={(filter, row) =>
+                                        row[filter.id].includes(filter.value)}
                                     loading={loading}
                                     data={data}
                                     onFetchData={(state, instance) => {
