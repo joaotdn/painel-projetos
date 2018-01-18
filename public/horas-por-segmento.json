@@ -1,0 +1,15 @@
+[
+    {
+        "segmento": "Análise'",
+        "horas": 30
+    }, {
+        "segmento": "Reuniões e Cerimônias",
+        "horas": 18
+    }, {
+        "segmento": "Desenvolvimento",
+        "horas": 80
+    },{
+        "segmento": "Treinamento",
+        "horas": 30
+    }
+]
