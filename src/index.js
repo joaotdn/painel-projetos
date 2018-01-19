@@ -17,7 +17,7 @@ Object.assign(ReactTableDefaults, {
     pageText: "Páginas",
     ofText: "de",
     rowsText: "linhas",
-    minRows: 10,
+    minRows: 10
 });
 
 WebFontLoader.load({

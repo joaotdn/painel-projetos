@@ -4,3 +4,26 @@
 body {
   margin: 0;
 }
+
+.status {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  display: inline-block;
+
+  &.red {
+    background: rgb(255,48,25);
+    background: -moz-linear-gradient(top, rgba(255,48,25,1) 0%, rgba(207,4,4,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(255,48,25,1) 0%,rgba(207,4,4,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,48,25,1) 0%,rgba(207,4,4,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=0 );
+  }
+
+  &.green {
+    background: rgb(82,177,82);
+    background: -moz-linear-gradient(top, rgba(82,177,82,1) 0%, rgba(0,138,0,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(82,177,82,1) 0%,rgba(0,138,0,1) 100%);
+    background: linear-gradient(to bottom, rgba(82,177,82,1) 0%,rgba(0,138,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52b152', endColorstr='#008a00',GradientType=0 );
+  }
+}

@@ -18,6 +18,7 @@ export class ExecutedHours extends Component {
     componentWillReceiveProps(nextProps) {
         const prevstate = this.state;
         let id_emissor = nextProps.match.params.id_emissor;
+
         if(id_emissor) {
             this.setState({ id_emissor: id_emissor });
             axios.get(`${constants.API_BASE_URL}/horas-executadas.json`)
@@ -36,17 +37,23 @@ export class ExecutedHours extends Component {
     }
     
     render() {
+        let meses = [], horas = [];
+        this.state.data.map(d => {
+            meses.push(d.mes);
+            horas.push(d.horas);
+        });
+
         const data = {
-            labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho'],
+            labels: meses,
             datasets: [
               {
-                label: 'My First dataset',
+                label: 'Total de horas',
                 backgroundColor: 'rgba(255,99,132,0.2)',
                 borderColor: 'rgba(255,99,132,1)',
                 borderWidth: 1,
                 hoverBackgroundColor: 'rgba(255,99,132,0.4)',
                 hoverBorderColor: 'rgba(255,99,132,1)',
-                data: [65, 59, 80, 81, 56, 55, 40]
+                data: horas
               }
             ]
         };
@@ -54,13 +61,13 @@ export class ExecutedHours extends Component {
         return (
             <div>
                 <Grid>
-                    <Cell desktopSize={8} desktopOffset={2}>
+                    <Cell desktopSize={10} desktopOffset={1}>
                         <Card>
                             <CardTitle title="Horas executadas"/>
                             <Divider/>
                             <CardText>
                                 <Bar
-
+                                    data={data}
                                 />
                             </CardText>
                         </Card>

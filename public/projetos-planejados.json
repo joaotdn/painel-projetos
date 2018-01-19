@@ -1,0 +1,24 @@
+[
+    {
+        "projetos": "P170213: Arrecadação On-line [Fase 1] - API de Pagamentos",
+        "go": "",
+        "horas": "8",
+        "fim": "18/09/17",
+        "entregaEmDia": "Sim",
+        "entregaComBugs": "Não"
+    }, {
+        "projetos": "P170018: Implantação Cartão Múltiplo Agiplan",
+        "go": "",
+        "horas": "15",
+        "fim": "20/09/17",
+        "entregaEmDia": "Não",
+        "entregaComBugs": "Não"
+    } , {
+        "projetos": "P170248: Implantação Débito Maestro - Fase II do múltiplo da Agiplan",
+        "go": "",
+        "horas": "5",
+        "fim": "22/09/17",
+        "entregaEmDia": "Não",
+        "entregaComBugs": "Sim"
+    }
+]
